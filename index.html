@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turunan Pertama Fungsi Aljabar</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #10152d;
+    color: white;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    padding: 65px 9%;
+    background: linear-gradient(135deg,#172554,#312e81,#581c87);
+    animation: fade .5s;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slide.active {
+    display: flex;
+}
+
+@keyframes fade {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+h1 {
+    font-size: 48px;
+    color: #facc15;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 36px;
+    color: #facc15;
+    margin-bottom: 30px;
+}
+
+p, li {
+    font-size: 23px;
+    line-height: 1.6;
+}
+
+ul {
+    margin-left: 35px;
+}
+
+.formula {
+    background: rgba(255,255,255,.12);
+    border-left: 6px solid #facc15;
+    padding: 24px;
+    margin: 20px 0;
+    border-radius: 12px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.box {
+    background: rgba(255,255,255,.12);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 12px 0;
+}
+
+.highlight {
+    color: #facc15;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #c4b5fd;
+    font-size: 25px;
+}
+
+.nav {
+    position: fixed;
+    bottom: 20px;
+    right: 35px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 9px;
+    background: #facc15;
+    color: #172554;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: white;
+}
+
+#counter {
+    font-size: 16px;
+    color: white;
+}
+
+.footer {
+    position: fixed;
+    bottom: 25px;
+    left: 35px;
+    color: #c4b5fd;
+    font-size: 14px;
+}
+
+.center {
+    text-align: center;
+    align-items: center;
+}
+
+@media(max-width:600px) {
+    .slide {padding: 35px 7%;}
+    h1 {font-size: 34px;}
+    h2 {font-size: 27px;}
+    p, li {font-size: 18px;}
+    .formula {font-size: 21px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- SLIDE 1 -->
+<section class="slide active center">
+    <p class="subtitle">MATEMATIKA</p>
+    <h1>TURUNAN PERTAMA<br>FUNGSI ALJABAR</h1>
+    <div class="formula">
+        f(x) = xⁿ → f'(x) = nxⁿ⁻¹
+    </div>
+    <p>Materi Pembelajaran Matematika</p>
+    <p class="subtitle">Belajar Memahami Konsep Turunan</p>
+</section>
+
+<!-- SLIDE 2 -->
+<section class="slide">
+    <h2>Tujuan Pembelajaran</h2>
+    <p>Setelah mempelajari materi ini, peserta didik diharapkan mampu:</p>
+    <ul>
+        <li>Memahami pengertian turunan pertama fungsi aljabar.</li>
+        <li>Mengetahui rumus dasar turunan.</li>
+        <li>Menentukan turunan pertama suatu fungsi.</li>
+        <li>Menyelesaikan soal turunan fungsi aljabar.</li>
+        <li>Menerapkan konsep turunan dalam kehidupan sehari-hari.</li>
+    </ul>
+</section>
+
+<!-- SLIDE 3 -->
+<section class="slide">
+    <h2>Pengertian Turunan</h2>
+    <p>
+        Turunan merupakan konsep matematika yang digunakan
+        untuk mengetahui tingkat perubahan suatu fungsi
+        terhadap variabelnya.
+    </p>
+    <div class="box">
+        <p>Turunan pertama menunjukkan <span class="highlight">
+        laju perubahan sesaat</span> suatu fungsi.</p>
+    </div>
+    <div class="formula">
+        f'(x) = lim h→0
+        [f(x+h)-f(x)] / h
+    </div>
+    <p>Turunan juga dapat diartikan sebagai gradien garis singgung
+    pada suatu kurva.</p>
+</section>
+
+<!-- SLIDE 4 -->
+<section class="slide">
+    <h2>Rumus Dasar Turunan</h2>
+    <div class="formula">
+        Jika f(x) = c, maka f'(x) = 0
+    </div>
+    <div class="formula">
+        Jika f(x) = xⁿ, maka f'(x) = nxⁿ⁻¹
+    </div>
+    <div class="formula">
+        Jika f(x) = a xⁿ, maka f'(x) = an xⁿ⁻¹
+    </div>
+    <div class="formula">
+        Jika f(x) = u(x) ± v(x),
+        maka f'(x) = u'(x) ± v'(x)
+    </div>
+</section>
+
+<!-- SLIDE 5 -->
+<section class="slide">
+    <h2>Aturan Pangkat</h2>
+    <p>Aturan pangkat merupakan aturan utama dalam
+    menentukan turunan fungsi aljabar.</p>
+    <div class="formula">
+        f(x) = xⁿ
+        <br><br>
+        f'(x) = n · xⁿ⁻¹
+    </div>
+    <div class="box">
+        <p><span class="highlight">Langkah-langkah:</span></p>
+        <ul>
+            <li>Turunkan pangkat menjadi koefisien.</li>
+            <li>Kurangi pangkat dengan satu.</li>
+            <li>Sederhanakan hasilnya.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- SLIDE 6 -->
+<section class="slide">
+    <h2>Contoh Soal 1</h2>
+    <p>Tentukan turunan pertama dari:</p>
+    <div class="formula">
+        f(x) = 3x² + 5x - 7
+    </div>
+    <p><span class="highlight">Penyelesaian:</span></p>
+    <div class="box">
+        <p>f'(x) = 3(2)x²⁻¹ + 5(1)x⁰ - 0</p>
+        <p>f'(x) = 6x + 5</p>
+    </div>
+    <div class="formula">
+        Jawaban: f'(x) = 6x + 5
+    </div>
+</section>
+
+<!-- SLIDE 7 -->
+<section class="slide">
+    <h2>Contoh Soal 2</h2>
+    <p>Tentukan turunan pertama fungsi berikut:</p>
+    <div class="formula">
+        f(x) = 4x³ - 2x² + 6x - 8
+    </div>
+    <p><span class="highlight">Penyelesaian:</span></p>
+    <div class="box">
+        <p>f'(x) = 12x² - 4x + 6 - 0</p>
+        <p>f'(x) = 12x² - 4x + 6</p>
+    </div>
+    <div class="formula">
+        Jawaban: f'(x) = 12x² - 4x + 6
+    </div>
+</section>
+
+<!-- SLIDE 8 -->
+<section class="slide">
+    <h2>Penerapan Turunan</h2>
+    <p>Turunan memiliki banyak manfaat dalam kehidupan
+    sehari-hari, antara lain:</p>
+    <div class="box">
+        <p>📈 <span class="highlight">Ekonomi:</span>
+        Menghitung biaya marginal dan keuntungan marginal.</p>
+    </div>
+    <div class="box">
+        <p>🚗 <span class="highlight">Fisika:</span>
+        Menghitung kecepatan dan percepatan sesaat.</p>
+    </div>
+    <div class="box">
+        <p>📊 <span class="highlight">Optimasi:</span>
+        Menentukan nilai maksimum dan minimum suatu fungsi.</p>
+    </div>
+</section>
+
+<!-- SLIDE 9 -->
+<section class="slide">
+    <h2>Latihan Soal</h2>
+    <p>Tentukan turunan pertama dari fungsi berikut:</p>
+    <div class="box">
+        <p>1. f(x) = 5x² + 3x - 4</p>
+    </div>
+    <div class="box">
+        <p>2. f(x) = 2x³ - 6x² + 4x</p>
+    </div>
+    <div class="box">
+        <p>3. f(x) = 7x⁴ - 3x² + 9</p>
+    </div>
+    <p class="subtitle">Kerjakan secara mandiri!</p>
+</section>
+
+<!-- SLIDE 10 -->
+<section class="slide">
+    <h2>Kesimpulan</h2>
+    <p>Turunan pertama fungsi aljabar merupakan konsep
+    untuk menentukan laju perubahan suatu fungsi.</p>
+    <div class="formula">
+        f(x) = xⁿ
+        <br><br>
+        f'(x) = nxⁿ⁻¹
+    </div>
+    <p>Hal penting yang harus diingat:</p>
+    <ul>
+        <li>Konstanta memiliki turunan nol.</li>
+        <li>Pangkat dikalikan ke koefisien.</li>
+        <li>Pangkat dikurangi satu.</li>
+        <li>Setiap suku diturunkan secara terpisah.</li>
+    </ul>
+</section>
+
+<!-- SLIDE 11 -->
+<section class="slide center">
+    <h1>TERIMA KASIH</h1>
+    <div class="formula">
+        Tetap Semangat Belajar!
+    </div>
+    <p class="subtitle">Matematika Itu Menyenangkan</p>
+</section>
+
+<div class="footer">PRESENTASI MATEMATIKA</div>
+
+<div class="nav">
+    <button onclick="prevSlide()">❮ Sebelumnya</button>
+    <span id="counter">1 / 11</span>
+    <button onclick="nextSlide()">Selanjutnya ❯</button>
+    <button onclick="fullScreen()">⛶</button>
+</div>
+
+<script>
+let current = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(n) {
+    slides[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    document.getElementById('counter').innerText =
+        (current + 1) + ' / ' + slides.length;
+}
+
+function nextSlide() {
+    showSlide(current + 1);
+}
+
+function prevSlide() {
+    showSlide(current - 1);
+}
+
+function fullScreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+
+document.addEventListener('keydown', function(e) {
+    if(e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+    if(e.key === 'ArrowLeft') prevSlide();
+});
+</script>
+
+</body>
+</html>
